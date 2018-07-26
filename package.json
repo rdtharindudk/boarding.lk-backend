@@ -1,0 +1,16 @@
+{
+  "name": "boarding.lk-backend",
+  "version": "1.0.0",
+  "description": "Expres.js MongoDB backend for Boarding.lk",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "Tharindu Dilshan",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3"
+  }
+}
