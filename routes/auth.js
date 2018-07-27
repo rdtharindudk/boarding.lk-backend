@@ -34,7 +34,7 @@ router.post("/login", async (req,res) => {
         phonenumber : user.phonenumber, 
         city : user.city,
         isAdmin : user.isAdmin }, "boardinglk", { expiresIn: 60 * 15 });
-    res.send(token);
+    res.send({token : token} );
 
 });
 
