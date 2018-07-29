@@ -5,4 +5,4 @@ const multer = require("multer");
 const _ = require("lodash");
 const bcrypt = require("bcrypt");
 
-router.post("/newAdvert",)
+//router.post("/newAdvert",)
