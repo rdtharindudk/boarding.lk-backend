@@ -8,6 +8,12 @@ const advertSchema = new mongoose.Schema({
         minlength : 5,
         maxlength : 150
     },
+    description : {
+        type : String,
+        required : true,
+        minlength : 5,
+        maxlength : 500
+    },
     photos : {
         type : [String],
         required : true
@@ -35,6 +41,7 @@ const Advert = mongoose.model("Advert", advertSchema);
 function validateAdvert(advert){
     const schema = {
         title : Joi.string().min(5).max(150).required(),
+        description : Joi.string().min(5).max(500).required(),
         useremail : Joi.string().min(5).max(255).required().email(),
         userphonenumber : Joi.string().min(8).max(15).required(),
         username : Joi.string().min(5).max(50).required(),
