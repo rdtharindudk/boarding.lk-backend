@@ -11,6 +11,7 @@ router.post('/new', upload.array('photos', 5),async function (req, res, next) {
     const {error} = validate(req.body);
 
     if (error) {
+        console.log(error);
         return res.status(400).send(error.details[0].message);
     }
 
@@ -34,7 +35,7 @@ router.post('/new', upload.array('photos', 5),async function (req, res, next) {
 
 
     await advert.save();
-
+    console.log("tttt");
     res.status(200).send(_.pick(advert, ["username", "useremail","city","userphonenumber","_id","photos"]));
     
 });
