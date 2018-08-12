@@ -46,6 +46,10 @@ const advertSchema = new mongoose.Schema({
         required : true,
         minlength : 5,
         maxlength : 150
+    },
+    approved : {
+        type : Boolean,
+        default : false
     }
 });
 
