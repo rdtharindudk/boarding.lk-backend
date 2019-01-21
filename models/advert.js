@@ -50,6 +50,10 @@ const advertSchema = new mongoose.Schema({
     approved : {
         type : Boolean,
         default : false
+    },
+    publishedAt : {
+        type : Number,
+        required : true
     }
 });
 
@@ -64,7 +68,7 @@ function validateAdvert(advert) {
         useremail : Joi.string().min(5).max(255).required().email(),
         userphonenumber : Joi.string().min(8).max(15).required(),
         username : Joi.string().min(5).max(50).required(),
-        tags : Joi.required()
+        tags : Joi.required(),
     };
 
     return Joi.validate(advert,schema);
